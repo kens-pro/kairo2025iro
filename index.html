@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <title>【年内30個限定】選べる刺し子小豆カイロキット｜刺し子どり</title>
+  <title>【年内30個限定】選べる彩り刺し子小豆カイロキット｜刺し子どり</title>
 <style>
   /* --- 【超・読みやすさ重視スタイル】 --- */
   :root {
@@ -66,6 +66,16 @@
     line-height: 1.3;
     text-shadow: 0 2px 4px rgba(0,0,0,0.8);
   }
+  
+  /* ★追加：メインタイトル特大化用のスタイル */
+  .hero-title-main {
+    font-size: 1.7em; /* 親文字サイズの1.7倍（二回り大きく） */
+    display: block;    /* 改行して独立させる */
+    margin-top: 5px;   /* 少し隙間を空ける */
+    line-height: 1.1;  /* 行間を少し詰めて迫力を出す */
+    font-weight: 900;  /* 太く */
+  }
+
   .hero-tag {
     background: #fff;
     color: var(--main-color);
@@ -329,6 +339,7 @@
   @media screen and (max-width: 600px) {
     body { font-size: 20px; }
     .hero-title { font-size: 2rem; }
+    .hero-title-main { font-size: 1.5em; } /* スマホでも大きく */
     .price-yen { font-size: 3rem; }
     .sticky-cta-red { font-size: 22px; padding: 18px 0; border-radius: 10px; bottom: 15px;}
     .lp-container { padding-bottom: 120px; }
@@ -342,12 +353,17 @@
 
 <!-- 1. 全幅ヘッダーエリア -->
 <header class="hero-wrapper">
-  <img src="image/main_normal.JPG" alt="通常版刺し子小豆カイロ" class="hero-img-full">
+  <img src="image/main_normal.JPG" alt="彩り刺し子小豆カイロキット" class="hero-img-full">
   
   <div class="hero-text-overlay">
     <span class="hero-tag">12/23 発売</span>
-    <h1 class="hero-title">【年内限定30個】<br>色と柄が選べる<br>刺し子小豆カイロキット</h1>
-    <p class="hero-sub">お好みの色と、お好みの糸で。<br>自分だけのぬくもりを作る冬支度。<br>初心者さんにも優しい<br>通常版キットが登場です。</p>
+    <!-- ★修正箇所：メインタイトルを特大に -->
+    <h1 class="hero-title">
+      【年内限定30個】<br>
+      色と柄が選べる<br>
+      <span class="hero-title-main">彩り刺し子小豆カイロキット</span>
+    </h1>
+    <p class="hero-sub">お好みの色と、お好みの糸で。<br>自分だけのぬくもりを作る冬支度。<br>初心者さんにも優しい<br>「選べる」キットが登場です。</p>
   </div>
 </header>
 
@@ -361,9 +377,8 @@
     
     <div>
       <p>「もっとカジュアルに、刺し子を楽しみたい」<br>
-      そんな声にお応えして、カラーシーチング生地を使った通常版キットをご用意しました。</p>
+      そんな声にお応えして、カラーシーチング生地を使った<span class="lp-accent">「彩り（いろどり）キット」</span>をご用意しました。</p>
       <br>
-      <p>今回のキットは、<span class="lp-accent">針と糸が入っていません。</span><br>
       お手持ちの刺し子糸や、お気に入りの色の糸を使って、あなただけのアレンジを楽しんでいただけます。</p>
     </div>
 
@@ -372,7 +387,7 @@
 
     <div>
       <p>中身は北海道産小豆を<span class="lp-bold">たっぷり150g</span>。<br>
-      電子レンジで温めるだけで、じんわりとした湿熱が体を芯から温めてくれます。</p>
+      電子レンジで４０秒温めるだけで、じんわりとした湿熱が体を芯から温めてくれます。</p>
     </div>
   </section>
 
@@ -384,7 +399,7 @@
     </div>
 
     <div class="lp-text-center">
-      <p>今回の通常版キットは、<br>
+      <p>今回の彩りキットは、<br>
       <span class="lp-accent">「生地の色」</span>と<span class="lp-accent">「刺し子の柄」</span><br>
       をそれぞれお選びいただけます。</p>
     </div>
@@ -415,7 +430,6 @@
         <div class="choice-box">
           <span class="choice-title">① 丸つなぎ</span>
           <img src="image/maru_tsunagi.JPG" alt="丸つなぎ" style="width:100%; border-radius:4px;">
-          <!-- ★修正箇所 -->
           <p class="choice-desc"><span class="lp-bold">【下図記入済み】</span><br>円が重なり合う、縁起の良い丸模様。</p>
         </div>
 
@@ -423,7 +437,6 @@
         <div class="choice-box">
           <span class="choice-title">② 花刺し</span>
           <img src="image/hana_zashi.JPG" alt="花刺し" style="width:100%; border-radius:4px;">
-          <!-- ★修正箇所 -->
           <p class="choice-desc"><span class="lp-bold">【下図の方眼記入済み】</span><br>ガイドに合わせて小花を咲かせる人気の柄。</p>
         </div>
 
@@ -459,7 +472,6 @@
 
     <!-- チェックリスト -->
     <div class="check-box">
-      <!-- ★修正箇所 -->
       <div class="check-item">✅ 丸つなぎ・花刺しは「下図記入済み」！</div>
       <div class="check-item">✅ 面倒な図案写しは不要！（無地を除く）</div>
       <div class="check-item">✅ 刺し子どりの「解説動画」付き！</div>
@@ -471,7 +483,7 @@
     </p>
   </section>
 
-  <!-- ★追加：お客様の声セクション -->
+  <!-- お客様の声セクション -->
   <section class="lp-section">
     <div class="section-header">
       <h2 class="lp-title">Voice</h2>
@@ -530,7 +542,7 @@
   <section class="lp-section">
     <div class="section-header">
       <h2 class="lp-title">Kit Contents</h2>
-      <p>【通常版キット】お届けする中身</p>
+      <p>【彩りキット】お届けする中身</p>
     </div>
     
     <!-- 画像：キット内容 -->
@@ -540,7 +552,6 @@
       <li>カラーシーチング（表地）：1枚<br>※選んだ柄によって下図の状態が異なります</li>
       <li>内袋用 白晒：1枚</li>
       <li>北海道産小豆：150g</li>
-      <!-- ★追加 -->
       <li>ローズマリー 1本（ハーブ）</li>
       <li>月桂樹 2枚（ハーブ）</li>
       <li>仕様書・説明書<br>（動画QRコード・パスワード付）</li>
@@ -564,7 +575,7 @@
   <!-- 6. 価格・注文フロー -->
   <section class="lp-section">
     <div class="price-box">
-      <p style="font-weight:bold;">選べる2色・3デザイン<br>“刺し子小豆カイロ” キット（通常版）</p>
+      <p style="font-weight:bold;">選べる2色・3デザイン<br>“彩り（いろどり）小豆カイロ” キット</p>
       <p class="price-yen">¥2,500 <span style="font-size:1.5rem; font-weight:normal;">(税込)</span></p>
       <p class="lp-accent">★日本全国 送料込み</p>
       <p style="font-size:1.1rem; margin-top:15px; color:#555;">
