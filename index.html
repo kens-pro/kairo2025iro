@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <title>【年内30個限定】選べる彩り刺し子小豆カイロキット｜刺し子どり</title>
+  <title>【年内30個限定】選べる刺し子小豆カイロキット（2025 Version）｜刺し子どり</title>
 <style>
   /* --- 【超・読みやすさ重視スタイル】 --- */
   :root {
     --main-color: #A34A4A; /* 小豆色 */
-    --accent-blue: #2A4B68; /* 藍色 */
     --bg-color: #Fdfdfb; /* 生成り色 */
     --text-color: #111;   /* 文字色 */
   }
@@ -22,84 +21,112 @@
     font-weight: 500;
   }
 
-  /* --- レイアウト調整 --- */
   .lp-container {
     max-width: 800px;
     margin: 0 auto;
     padding: 0 15px 180px 15px;
   }
 
-  /* --- ヘッダーエリア --- */
+  /* --- ヘッダーエリア（修正版） --- */
   .hero-wrapper {
-    width: 100%;
     position: relative;
-    overflow: hidden;
-    background-color: var(--main-color);
-    margin-bottom: 40px;
-  }
-
-  .hero-img-full {
     width: 100%;
-    height: 50vh;
-    min-height: 300px;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    opacity: 0.9;
+    /* 高さは固定せず、中の文字量に合わせて伸縮させる */
+    overflow: hidden;
+    background-color: #333;
+    margin-bottom: 20px;
   }
 
-  .hero-text-overlay {
+  /* 背景画像 */
+  .hero-bg-img {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     width: 100%;
-    background: linear-gradient(to top, rgba(163, 74, 74, 0.95), transparent);
-    padding: 40px 15px 30px;
-    text-align: center;
-    color: white;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+    /* ★修正：画像を少し暗くして文字を読みやすく（赤みは無し） */
+    filter: brightness(0.65); 
   }
 
-  .hero-title {
-    font-family: "Yu Mincho", "YuMincho", serif;
-    font-size: 2.2rem;
-    margin: 0 0 10px 0;
-    line-height: 1.3;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
-  }
-  
-  /* ★追加：メインタイトル特大化用のスタイル */
-  .hero-title-main {
-    font-size: 1.7em; /* 親文字サイズの1.7倍（二回り大きく） */
-    display: block;    /* 改行して独立させる */
-    margin-top: 5px;   /* 少し隙間を空ける */
-    line-height: 1.1;  /* 行間を少し詰めて迫力を出す */
-    font-weight: 900;  /* 太く */
+  /* 画像の上の文字エリア */
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 60px 15px; /* 上下の余白で高さを調整 */
+    text-align: center;
+    color: white;
   }
 
   .hero-tag {
     background: #fff;
     color: var(--main-color);
-    padding: 5px 15px;
+    padding: 4px 15px;
     border-radius: 20px;
     font-weight: 900;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     display: inline-block;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  }
+
+  .hero-title {
+    font-family: "Yu Mincho", "YuMincho", serif;
+    font-size: 2rem;
+    margin: 0;
+    line-height: 1.4;
+    text-shadow: 0 3px 10px rgba(0,0,0,1); /* 強い影で視認性確保 */
+  }
+  
+  .hero-title-main {
+    font-size: 1.8em; /* さらに大きく */
+    display: block;
+    margin-top: 10px;
+    line-height: 1.1;
+    font-weight: 900;
+  }
+  
+  .hero-subtitle-ver {
+    display: block;
+    font-size: 0.6em;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    margin-top: 15px;
+    letter-spacing: 0.1em;
+    color: #fff;
+    font-weight: normal;
+    border-top: 1px solid rgba(255,255,255,0.8);
+    border-bottom: 1px solid rgba(255,255,255,0.8);
+    padding: 5px 10px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ★追加：スマホ用改行クラス（PCでは消える） */
+  .sp-br {
+    display: none;
+  }
+
+  /* --- ヘッダー下のキャッチコピー（画像の外に出しました） --- */
+  .hero-sub-text {
+    text-align: center;
+    padding: 20px 15px 40px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 2;
+    color: var(--text-color);
   }
 
   /* --- 共通セクション --- */
-  .lp-section {
-    padding: 40px 0;
-    border-bottom: 2px solid #ccc;
-  }
-  
+  .lp-section { padding: 40px 0; border-bottom: 2px solid #ccc; }
   h2.lp-title {
     font-family: "Yu Mincho", "YuMincho", serif;
     color: var(--main-color);
     text-align: center;
     font-size: 2.4rem;
     margin-bottom: 30px;
-    letter-spacing: 0.05em;
     border-bottom: 4px solid var(--main-color);
     display: inline-block;
     padding-bottom: 5px;
@@ -108,266 +135,138 @@
   .section-header { text-align: center; margin-bottom: 30px; }
   .lp-text-center { text-align: center; }
   .lp-bold { font-weight: 700; }
-  .lp-accent { 
-    color: var(--main-color); 
-    font-weight: 900; 
-    border-bottom: 3px solid rgba(163, 74, 74, 0.3);
-    font-size: 1.1em;
-  }
+  .lp-accent { color: var(--main-color); font-weight: 900; border-bottom: 3px solid rgba(163, 74, 74, 0.3); }
 
-  /* --- 画像スタイル --- */
-  .img-medium {
-    display: block;
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-    margin: 30px auto;
-    border-radius: 4px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  }
-  .img-restrict-size {
-    display: block;
-    max-width: 100%;
-    width: 500px;
-    height: auto;
-    margin: 0 auto 30px auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  }
+  /* 画像 */
+  .img-medium { display: block; max-width: 100%; width: 100%; height: auto; margin: 30px auto; border-radius: 4px; }
+  .img-restrict-size { display: block; max-width: 100%; width: 500px; height: auto; margin: 0 auto 30px auto; border-radius: 8px; }
 
-  /* --- リスト・ボックス --- */
+  /* リスト・ボックス */
   .kit-list, .tool-list {
-    background: #fff;
-    padding: 25px 15px;
-    border: 3px solid #ccc;
-    border-radius: 8px;
-    list-style: none;
-    margin: 0 auto;
-    font-size: 22px;
+    background: #fff; padding: 25px 15px; border: 3px solid #ccc; border-radius: 8px; list-style: none; margin: 0 auto; font-size: 22px;
   }
-  .kit-list li, .tool-list li {
-    margin-bottom: 20px;
-    padding-left: 1.2em;
-    position: relative;
-    border-bottom: 1px dotted #888;
-    padding-bottom: 15px;
-  }
+  .kit-list li, .tool-list li { margin-bottom: 20px; padding-left: 1.2em; position: relative; border-bottom: 1px dotted #888; padding-bottom: 15px; }
   .kit-list li::before { content: "●"; color: var(--main-color); position: absolute; left: 0; font-weight: bold; }
   .tool-list li::before { content: "✂"; color: #555; position: absolute; left: 0; font-weight: bold; }
 
-  /* チェックリスト風ボックス */
-  .check-box {
-    background-color: #fffaf0;
-    border: 3px solid var(--main-color);
-    padding: 25px 15px;
-    border-radius: 10px;
-    margin: 30px 0;
-  }
-  .check-item {
-    font-size: 24px;
-    font-weight: 900;
-    margin-bottom: 20px;
-    color: var(--main-color);
-    line-height: 1.4;
-  }
+  /* チェックリスト */
+  .check-box { background-color: #fffaf0; border: 3px solid var(--main-color); padding: 25px 15px; border-radius: 10px; margin: 30px 0; }
+  .check-item { font-size: 24px; font-weight: 900; margin-bottom: 20px; color: var(--main-color); }
 
-  /* 選択肢ボックス */
-  .choice-container {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 30px;
-  }
-  .choice-box {
-    background: #fff;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    width: 30%;
-    padding: 15px;
-    text-align: center;
-  }
-  .choice-box-2col {
-    width: 45%;
-  }
-  
-  .choice-title {
-    font-weight: 900;
-    font-size: 1.3rem;
-    color: var(--main-color);
-    margin-bottom: 10px;
-    display: block;
-    min-height: 1.8em;
-  }
-  .choice-desc {
-    font-size: 0.9rem;
-    line-height: 1.4;
-    margin-top: 10px;
-  }
+  /* 選択肢 */
+  .choice-container { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 30px; }
+  .choice-box { background: #fff; border: 2px solid #ccc; border-radius: 8px; width: 30%; padding: 15px; text-align: center; }
+  .choice-box-2col { width: 45%; }
+  .choice-title { font-weight: 900; font-size: 1.3rem; color: var(--main-color); margin-bottom: 10px; display: block; min-height: 1.8em; }
+  .choice-desc { font-size: 0.9rem; line-height: 1.4; margin-top: 10px; }
 
-  /* --- お客様の声 --- */
-  .voice-section {
-    background-color: #fff0f5; /* 薄いピンク背景 */
-    padding: 30px 15px;
-    border-radius: 10px;
-    margin: 40px 0;
-  }
-  .voice-card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    position: relative;
-  }
-  .voice-card::before {
-    content: "❝";
-    font-size: 4rem;
-    color: #ffd1d1;
-    position: absolute;
-    top: -10px;
-    left: 10px;
-    font-family: serif;
-    z-index: 0;
-  }
-  .voice-text {
-    position: relative;
-    z-index: 1;
-    font-size: 1rem;
-  }
-  .voice-meta {
-    text-align: right;
-    font-size: 0.9rem;
-    color: #666;
-    margin-top: 10px;
-    font-weight: bold;
-  }
+  /* お客様の声 */
+  .voice-section { background-color: #fff0f5; padding: 30px 15px; border-radius: 10px; margin: 40px 0; }
+  .voice-card { background: #fff; padding: 20px; border-radius: 10px; margin-bottom: 20px; position: relative; }
+  .voice-card::before { content: "❝"; font-size: 4rem; color: #ffd1d1; position: absolute; top: -10px; left: 10px; font-family: serif; }
+  .voice-text { position: relative; z-index: 1; font-size: 1rem; }
+  .voice-meta { text-align: right; font-size: 0.9rem; color: #666; margin-top: 10px; font-weight: bold; }
 
-  .price-box {
-    background-color: #fff5f5;
-    border: 4px solid var(--main-color);
-    padding: 40px 15px;
-    text-align: center;
-    border-radius: 10px;
-    margin: 40px 0;
-  }
-  .price-yen {
-    font-size: 3.5rem;
-    color: var(--main-color);
-    font-weight: 900;
-    font-family: "Yu Mincho", serif;
-    line-height: 1.2;
-    display: block;
-    margin: 10px 0;
-  }
-
-  /* --- 注文フロー --- */
+  /* 価格・フロー */
+  .price-box { background-color: #fff5f5; border: 4px solid var(--main-color); padding: 40px 15px; text-align: center; border-radius: 10px; margin: 40px 0; }
+  .price-yen { font-size: 3.5rem; color: var(--main-color); font-weight: 900; font-family: "Yu Mincho", serif; margin: 10px 0; }
   .flow-box { background: #fff; padding: 20px 15px; border-radius: 8px; border: 2px solid #ccc; }
   .flow-step { margin-bottom: 25px; font-weight: bold; font-size: 22px; }
-  .flow-step span {
-    background: var(--main-color);
-    color: white;
-    padding: 5px 12px;
-    border-radius: 50%;
-    margin-right: 5px;
-    font-size: 20px;
-    display: inline-block;
-  }
+  .flow-step span { background: var(--main-color); color: white; padding: 5px 12px; border-radius: 50%; margin-right: 5px; font-size: 20px; display: inline-block; }
+  .dm-template { background-color: #fff; border: 4px dashed var(--main-color); padding: 20px; margin: 20px 0; text-align: left; font-size: 22px; color: #000; font-weight: bold; }
 
-  .dm-template {
-    background-color: #fff;
-    border: 4px dashed var(--main-color);
-    padding: 20px;
-    margin: 20px 0;
-    text-align: left;
-    font-size: 22px;
-    color: #000;
-    line-height: 1.6;
-    font-weight: bold;
-  }
-
-  /* --- インスタ誘導ボタン（通常） --- */
-  .insta-main-btn {
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    color: white;
-    font-size: 24px;
-    font-weight: 900;
-    padding: 25px 20px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    display: block;
-    margin: 40px auto;
-    width: 100%;
-    text-align: center;
-    text-decoration: none;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  /* ボタン */
+  .insta-main-btn { 
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    color: white; 
+    font-size: 24px; 
+    font-weight: 900; 
+    padding: 25px 20px; 
+    border: none; 
+    border-radius: 50px; 
+    cursor: pointer; 
+    display: block; 
+    margin: 40px auto; 
+    width: 100%; 
+    text-align: center; 
+    text-decoration: none; 
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2); 
     line-height: 1.4;
+    /* ★修正：paddingを含めて幅100%にする設定を追加 */
+    box-sizing: border-box; 
   }
+  
+  .sticky-cta-red { 
+    position: fixed; 
+    bottom: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 9999; 
+    width: 94%; 
+    max-width: 500px; 
+    padding: 20px 0; 
+    background-color: #A34A4A; 
+    color: white; 
+    text-decoration: none; 
+    border-radius: 15px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 15px; 
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5); 
+    font-size: 24px; 
+    font-weight: 900; 
+    transition: bottom 0.3s; 
+    line-height: 1; 
+    border: 2px solid white; 
+    /* 念のためこちらも追加 */
+    box-sizing: border-box;
+  }
+  .sticky-cta-red:hover { bottom: 23px; opacity: 0.95; }
 
-  /* --- 追従ボタン --- */
-  .sticky-cta-red {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 9999;
-    width: 94%;
-    max-width: 500px;
-    padding: 20px 0;
-    background-color: #A34A4A; /* 小豆色 */
-    color: white;
-    text-decoration: none;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-    font-size: 24px;
-    font-weight: 900;
-    transition: bottom 0.3s;
-    line-height: 1;
-    border: 2px solid white;
-  }
-  .sticky-cta-red:hover {
-    bottom: 23px;
-    opacity: 0.95;
-  }
-
-  /* スマホでの微調整 */
   @media screen and (max-width: 600px) {
     body { font-size: 20px; }
     .hero-title { font-size: 2rem; }
-    .hero-title-main { font-size: 1.5em; } /* スマホでも大きく */
+    .hero-title-main { font-size: 1.8em; line-height: 1.3; } /* スマホでの行間調整 */
     .price-yen { font-size: 3rem; }
     .sticky-cta-red { font-size: 22px; padding: 18px 0; border-radius: 10px; bottom: 15px;}
     .lp-container { padding-bottom: 120px; }
-    .choice-box, .choice-box-2col { width: 100%; margin-bottom: 10px; } /* スマホは縦積み */
+    .choice-box, .choice-box-2col { width: 100%; margin-bottom: 10px; }
     .choice-title { min-height: auto; }
+    
+    /* ★追加：スマホでだけ改行を有効にする */
+    .sp-br { display: block; }
   }
-
 </style>
 </head>
 <body>
 
-<!-- 1. 全幅ヘッダーエリア -->
+<!-- 1. 全幅ヘッダーエリア（修正版） -->
 <header class="hero-wrapper">
-  <img src="image/IMG_0933.JPG" alt="彩り刺し子小豆カイロキット" class="hero-img-full">
+  <!-- 画像を背景的に配置 -->
+  <img src="image/IMG_0933.JPG" alt="2025年版 刺し子小豆カイロキット" class="hero-bg-img">
   
-  <div class="hero-text-overlay">
+  <!-- コンテンツ：この文字量に応じて高さが決まるので切れない -->
+  <div class="hero-content">
     <span class="hero-tag">12/23 発売</span>
-    <!-- ★修正箇所：メインタイトルを特大に -->
     <h1 class="hero-title">
       【年内限定30個】<br>
       色と柄が選べる<br>
-      <span class="hero-title-main">彩り刺し子小豆カイロキット</span>
+      <!-- ★修正：刺し子小豆とカイロキットの間で改行するように設定 -->
+      <span class="hero-title-main">刺し子小豆<br class="sp-br">カイロキット</span>
+      <span class="hero-subtitle-ver">2025 Version</span>
     </h1>
-    <p class="hero-sub">お好みの色と、お好みの糸で。<br>自分だけのぬくもりを作る冬支度。<br>初心者さんにも優しい<br>「選べる」キットが登場です。</p>
   </div>
 </header>
 
+<!-- ヘッダー下のキャッチコピー -->
 <div class="lp-container">
+  <div class="hero-sub-text">
+    お好みの色と、お好みの糸で。<br>
+    自分だけのぬくもりを作る冬支度。<br>
+    初心者さんにも優しい<br>
+    「選べる」キットが登場です。
+  </div>
 
   <!-- 2. 商品紹介 -->
   <section class="lp-section">
@@ -377,17 +276,22 @@
     
     <div>
       <p>「もっとカジュアルに、刺し子を楽しみたい」<br>
-      そんな声にお応えして、カラーシーチング生地を使った<span class="lp-accent">「彩り（いろどり）キット」</span>をご用意しました。</p>
+      そんな声にお応えして、カラーシーチング生地を使った<span class="lp-accent">「2025年バージョン」</span>をご用意しました。</p>
       <br>
-      お手持ちの刺し子糸や、お気に入りの色の糸を使って、あなただけのアレンジを楽しんでいただけます。</p>
+      <img src="image/IMG_0908.JPG" alt="小豆カイロ花刺し" class="img-medium">
+      <p>「この生地には、あの糸が似合うかな？」<br>
+      そんな風に、<span class="lp-accent">お気に入りの糸との組み合わせを考える</span>のも、このキットの楽しみの一つ。<br>
+      <br>
+      お手持ちの刺し子糸を使って、<br>
+      あなただけの色合わせをお楽しみください。</p>
     </div>
 
     <!-- 画像：2色の生地イメージ -->
     <img src="image/fabric_colors.JPG" alt="選べる2色のカラーシーチング" class="img-medium">
-
+　　<img src="image/IMG_0913.JPG" alt="北海道産小豆150g" class="img-medium">
     <div>
       <p>中身は北海道産小豆を<span class="lp-bold">たっぷり150g</span>。<br>
-      電子レンジで４０秒温めるだけで、じんわりとした湿熱が体を芯から温めてくれます。</p>
+      電子レンジで温めるだけで、じんわりとした湿熱が体を芯から温めてくれます。</p>
     </div>
   </section>
 
@@ -399,7 +303,7 @@
     </div>
 
     <div class="lp-text-center">
-      <p>今回の彩りキットは、<br>
+      <p>今回のキットは、<br>
       <span class="lp-accent">「生地の色」</span>と<span class="lp-accent">「刺し子の柄」</span><br>
       をそれぞれお選びいただけます。</p>
     </div>
@@ -429,26 +333,25 @@
         <!-- 1. 丸つなぎ -->
         <div class="choice-box">
           <span class="choice-title">① 丸つなぎ</span>
-          <img src="image/maru_tsunagi.JPG" alt="丸つなぎ" style="width:100%; border-radius:4px;">
+          <img src="image/丸つなぎ.jpg" alt="丸つなぎ" style="width:100%; border-radius:4px;">
           <p class="choice-desc"><span class="lp-bold">【下図記入済み】</span><br>円が重なり合う、縁起の良い丸模様。</p>
         </div>
 
         <!-- 2. 花刺し -->
         <div class="choice-box">
           <span class="choice-title">② 花刺し</span>
-          <img src="image/hana_zashi.JPG" alt="花刺し" style="width:100%; border-radius:4px;">
+          <img src="image/方眼花刺し4mm黒.jpg" alt="花刺し" style="width:100%; border-radius:4px;">
           <p class="choice-desc"><span class="lp-bold">【下図の方眼記入済み】</span><br>ガイドに合わせて小花を咲かせる人気の柄。</p>
         </div>
 
         <!-- 3. 無地 -->
         <div class="choice-box">
           <span class="choice-title">③ 無地</span>
-          <img src="image/muji.JPG" alt="無地" style="width:100%; border-radius:4px;">
+          <img src="image/一目干網.jpg" alt="無地" style="width:100%; border-radius:4px;">
           <p class="choice-desc"><span class="lp-bold">【一目干網 図案付】</span><br>自由に刺したい方に。<br>※別途、一目干網の下図用プリントをお付けします。</p>
         </div>
       </div>
     </div>
-
   </section>
 
   <!-- 4. 初心者でも安心の理由 -->
@@ -542,11 +445,10 @@
   <section class="lp-section">
     <div class="section-header">
       <h2 class="lp-title">Kit Contents</h2>
-      <p>【彩りキット】お届けする中身</p>
+      <p>【2025年バージョン】<br>お届けする中身</p>
     </div>
     
-    <!-- 画像：キット内容 -->
-    <img src="image/kit_contents_normal.JPG" alt="キットの中身一式" class="img-restrict-size">
+    <img src="image/IMG_3316.JPG" alt="キットの中身一式" class="img-restrict-size">
 
     <ul class="kit-list">
       <li>カラーシーチング（表地）：1枚<br>※選んだ柄によって下図の状態が異なります</li>
@@ -575,12 +477,11 @@
   <!-- 6. 価格・注文フロー -->
   <section class="lp-section">
     <div class="price-box">
-      <p style="font-weight:bold;">選べる2色・3デザイン<br>“彩り（いろどり）小豆カイロ” キット</p>
+      <p style="font-weight:bold;">選べる2色・3デザイン<br>“刺し子小豆カイロ” キット（2025 ver.）</p>
       <p class="price-yen">¥2,500 <span style="font-size:1.5rem; font-weight:normal;">(税込)</span></p>
       <p class="lp-accent">★日本全国 送料込み</p>
       <p style="font-size:1.1rem; margin-top:15px; color:#555;">
         【年内限定 30個】<br>
-        （メルカリでの決済・購入も可能です）
       </p>
     </div>
 
@@ -589,7 +490,6 @@
       <p class="flow-step"><span>1</span> 下記ボタンよりInstagramを開いてください。</p>
       <p class="flow-step"><span>2</span> メッセージ（DM）で下記をお知らせください。</p>
       
-      <!-- DMテンプレート -->
       <div class="dm-template">
         【ご注文用テンプレート】<br>
         1. お名前（本名）：<br><br>
@@ -603,8 +503,8 @@
         ※購入方法でメルカリご希望の方はその旨をお伝えください。
       </p>
 
-      <p class="flow-step"><span>3</span> 振込先口座（またはメルカリページ）をご案内します。</p>
-      <p class="flow-step"><span>4</span> ご入金確認後、発送いたします。</p>
+      <p class="flow-step"><span>3</span> 振込先口座をご案内します。</p>
+      <p class="flow-step"><span>4</span> ご入金確認後、5日～7日後までに発送いたします。</p>
     </div>
   </section>
 
@@ -628,21 +528,17 @@
       </p>
     </div>
     
-    <!-- Instagramへ飛ぶボタン -->
     <a href="https://www.instagram.com/sashikodori/" class="insta-main-btn" target="_blank" rel="noopener">
       Instagramを開いて<br>キットを注文する
     </a>
-    
   </section>
 
-  <!-- フッターリンク -->
   <div style="text-align:center; font-size:1.2rem; margin-top:30px; color:#666;">
     <a href="https://doriken.shop/特定商取引法に基づく表記/" target="_blank">特定商取引法に基づく表記</a>
   </div>
 
 </div>
 
-<!-- ★追従ボタン（画面下部固定・小豆色） -->
 <a href="https://www.instagram.com/sashikodori/" class="sticky-cta-red" target="_blank" rel="noopener">
   <span style="font-size:2rem;">✉</span>
   インスタDMで申し込む
