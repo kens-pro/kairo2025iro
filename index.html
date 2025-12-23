@@ -7,6 +7,7 @@
   :root {
     --main-color: #A34A4A; /* 小豆色 */
     --line-color: #06c755; /* LINEグリーン */
+    --mail-color: #556b2f; /* メールのための落ち着いた色（または下記のように個別に設定） */
     --bg-color: #Fdfdfb; /* 生成り色 */
     --text-color: #111;   /* 文字色 */
   }
@@ -101,9 +102,7 @@
     margin-right: auto;
   }
 
-  .sp-br {
-    display: none;
-  }
+  .sp-br { display: none; }
 
   .hero-sub-text {
     text-align: center;
@@ -135,43 +134,16 @@
   .img-medium { display: block; max-width: 100%; width: 100%; height: auto; margin: 30px auto; border-radius: 4px; }
   .img-restrict-size { display: block; max-width: 100%; width: 500px; height: auto; margin: 0 auto 30px auto; border-radius: 8px; }
 
-  /* リスト・ボックス */
-  .kit-list, .tool-list {
-    background: #fff; padding: 25px 15px; border: 3px solid #ccc; border-radius: 8px; list-style: none; margin: 0 auto; font-size: 22px;
-  }
-  .kit-list li, .tool-list li { margin-bottom: 20px; padding-left: 1.2em; position: relative; border-bottom: 1px dotted #888; padding-bottom: 15px; }
-  .kit-list li::before { content: "●"; color: var(--main-color); position: absolute; left: 0; font-weight: bold; }
-  .tool-list li::before { content: "✂"; color: #555; position: absolute; left: 0; font-weight: bold; }
-
-  /* チェックリスト */
-  .check-box { background-color: #fffaf0; border: 3px solid var(--main-color); padding: 25px 15px; border-radius: 10px; margin: 30px 0; }
-  .check-item { font-size: 24px; font-weight: 900; margin-bottom: 20px; color: var(--main-color); }
-
-  /* 選択肢 */
-  .choice-container { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 30px; }
-  .choice-box { background: #fff; border: 2px solid #ccc; border-radius: 8px; width: 30%; padding: 15px; text-align: center; }
-  .choice-box-2col { width: 45%; }
-  .choice-title { font-weight: 900; font-size: 1.3rem; color: var(--main-color); margin-bottom: 10px; display: block; min-height: 1.8em; }
-  .choice-desc { font-size: 0.9rem; line-height: 1.4; margin-top: 10px; }
-
-  /* お客様の声 */
-  .voice-section { background-color: #fff0f5; padding: 30px 15px; border-radius: 10px; margin: 40px 0; }
-  .voice-card { background: #fff; padding: 20px; border-radius: 10px; margin-bottom: 20px; position: relative; }
-  .voice-card::before { content: "❝"; font-size: 4rem; color: #ffd1d1; position: absolute; top: -10px; left: 10px; font-family: serif; }
-  .voice-text { position: relative; z-index: 1; font-size: 1rem; }
-  .voice-meta { text-align: right; font-size: 0.9rem; color: #666; margin-top: 10px; font-weight: bold; }
-
   /* 価格・フロー */
   .price-box { background-color: #fff5f5; border: 4px solid var(--main-color); padding: 40px 15px; text-align: center; border-radius: 10px; margin: 40px 0; }
   .price-yen { font-size: 3.5rem; color: var(--main-color); font-weight: 900; font-family: "Yu Mincho", serif; margin: 10px 0; }
   .flow-box { background: #fff; padding: 20px 15px; border-radius: 8px; border: 2px solid #ccc; }
   .flow-step { margin-bottom: 25px; font-weight: bold; font-size: 22px; }
   .flow-step span { background: var(--main-color); color: white; padding: 5px 12px; border-radius: 50%; margin-right: 5px; font-size: 20px; display: inline-block; }
-  .dm-template { background-color: #fff; border: 4px dashed var(--line-color); padding: 20px; margin: 20px 0; text-align: left; font-size: 22px; color: #000; font-weight: bold; }
+  .dm-template { background-color: #fff; border: 4px dashed #666; padding: 20px; margin: 20px 0; text-align: left; font-size: 22px; color: #000; font-weight: bold; }
 
-  /* ボタン */
-  .line-main-btn { 
-    background-color: var(--line-color);
+  /* --- ボタン共通スタイル（シニア向け巨大ボタン） --- */
+  .btn-common {
     color: white; 
     font-size: 24px; 
     font-weight: 900; 
@@ -180,7 +152,7 @@
     border-radius: 50px; 
     cursor: pointer; 
     display: block; 
-    margin: 40px auto 10px auto; 
+    margin: 15px auto; 
     width: 100%; 
     text-align: center; 
     text-decoration: none; 
@@ -189,15 +161,9 @@
     box-sizing: border-box; 
   }
 
-  .mail-sub-btn {
-    display: block;
-    text-align: center;
-    color: #666;
-    font-size: 0.9rem;
-    text-decoration: underline;
-    margin-bottom: 40px;
-  }
-  
+  .line-main-btn { background-color: var(--line-color); }
+  .mail-main-btn { background-color: #4682b4; } /* 落ち着いたスチールブルー */
+
   .sticky-cta-line { 
     position: fixed; 
     bottom: 20px; 
@@ -223,7 +189,32 @@
     border: 2px solid white; 
     box-sizing: border-box;
   }
-  .sticky-cta-line:hover { bottom: 23px; opacity: 0.95; }
+
+  /* リスト */
+  .kit-list, .tool-list {
+    background: #fff; padding: 25px 15px; border: 3px solid #ccc; border-radius: 8px; list-style: none; margin: 0 auto; font-size: 22px;
+  }
+  .kit-list li, .tool-list li { margin-bottom: 20px; padding-left: 1.2em; position: relative; border-bottom: 1px dotted #888; padding-bottom: 15px; }
+  .kit-list li::before { content: "●"; color: var(--main-color); position: absolute; left: 0; font-weight: bold; }
+  .tool-list li::before { content: "✂"; color: #555; position: absolute; left: 0; font-weight: bold; }
+
+  /* チェックリスト */
+  .check-box { background-color: #fffaf0; border: 3px solid var(--main-color); padding: 25px 15px; border-radius: 10px; margin: 30px 0; }
+  .check-item { font-size: 24px; font-weight: 900; margin-bottom: 20px; color: var(--main-color); }
+
+  /* 選択肢 */
+  .choice-container { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 30px; }
+  .choice-box { background: #fff; border: 2px solid #ccc; border-radius: 8px; width: 30%; padding: 15px; text-align: center; }
+  .choice-box-2col { width: 45%; }
+  .choice-title { font-weight: 900; font-size: 1.3rem; color: var(--main-color); margin-bottom: 10px; display: block; min-height: 1.8em; }
+  .choice-desc { font-size: 0.9rem; line-height: 1.4; margin-top: 10px; }
+
+  /* お客様の声 */
+  .voice-section { background-color: #fff0f5; padding: 30px 15px; border-radius: 10px; margin: 40px 0; }
+  .voice-card { background: #fff; padding: 20px; border-radius: 10px; margin-bottom: 20px; position: relative; }
+  .voice-card::before { content: "❝"; font-size: 4rem; color: #ffd1d1; position: absolute; top: -10px; left: 10px; font-family: serif; }
+  .voice-text { position: relative; z-index: 1; font-size: 1rem; }
+  .voice-meta { text-align: right; font-size: 0.9rem; color: #666; margin-top: 10px; font-weight: bold; }
 
   @media screen and (max-width: 600px) {
     body { font-size: 20px; }
@@ -233,8 +224,8 @@
     .sticky-cta-line { font-size: 22px; padding: 18px 0; border-radius: 10px; bottom: 15px;}
     .lp-container { padding-bottom: 120px; }
     .choice-box, .choice-box-2col { width: 100%; margin-bottom: 10px; }
-    .choice-title { min-height: auto; }
     .sp-br { display: block; }
+    .btn-common { font-size: 20px; padding: 20px 15px; }
   }
 </style>
 </head>
@@ -263,23 +254,28 @@
           </h2>
           <div style="text-align: left; font-size: 0.95rem; color: #333;">
               <p style="margin-bottom: 15px;">
-                  たくさんの反響をいただき、誠にありがとうございます！<br>重要なお知らせがございます。
+                  たくさんの反響をいただき、誠にありがとうございます！重要なお知らせがございます。
               </p>
               <p style="background-color: #ffecec; padding: 10px; border-radius: 5px; margin-bottom: 15px;">
                   <strong>① DM制限に関するお詫び</strong><br>
-                  現在、インスタグラムのＤＭで刺し子どりから送信できない状態となっております。申し訳ございません。<br>
-                  <span style="color: #d9534f; font-weight: bold;">すでにDMやコメントをくださった方も、お手数ですが下記の「公式LINE」または「メール」より、再度ご連絡をいただけますでしょうか。</span>今後の連絡は公式LINEまたはメールで行わせていただきます。
+                  現在、インスタグラムのＤＭで刺し子どりから返信ができない状態となっております。申し訳ございません。<br>
+                  <span style="color: #d9534f; font-weight: bold;">すでにDMやコメントをくださった方も、お手数ですが下記のボタンより、再度ご連絡をいただけますでしょうか。</span>今後の連絡は公式LINEまたはメールで行わせていただきます。
               </p>
               <p style="margin-bottom: 15px;">
                   <strong>② 年内発送分は完売いたしました</strong><br>
-                  先着30名様については年内に発送予定です。それ以降のお申込みも、発送時期の目安を個別にお知らせしますのでご安心ください。<span style="font-weight: bold; color: #d9534f;">現在はご予約受付として、順次発送いたします。</span>
+                  先着30名様については年内に発送予定です。それ以降のお申込みも、発送時期の目安を個別にお知らせします。<span style="font-weight: bold; color: #d9534f;">現在は【1月以降発送】のご予約受付として、順次発送いたします。</span>
               </p>
           </div>
-          <div style="margin-top: 25px; margin-bottom: 10px;">
-              <a href="https://lin.ee/ce9vOwT" target="_blank" style="background-color: #06c755; color: white; padding: 18px 30px; text-decoration: none; border-radius: 50px; display: inline-block; font-weight: bold; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 10px;">
+          
+          <!-- 緊急ボタンエリア -->
+          <div style="margin-top: 25px;">
+              <a href="https://lin.ee/ce9vOwT" target="_blank" style="background-color: #06c755; color: white; padding: 18px 20px; text-decoration: none; border-radius: 50px; display: block; font-weight: bold; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 15px;">
                   公式LINEから連絡する
-              </a><br>
-              <a href="mailto:doripu7@gmail.com" style="color: #666; font-size: 0.9rem; text-decoration: underline;">LINEをお使いでない方はメールで連絡する</a>
+              </a>
+              <a href="mailto:doripu7@gmail.com?subject=刺し子小豆カイロ申し込み" style="background-color: #4682b4; color: white; padding: 18px 20px; text-decoration: none; border-radius: 50px; display: block; font-weight: bold; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                  メールで連絡する
+              </a>
+              <p style="font-size: 0.8rem; color: #666; margin-top: 10px;">※メール：doripu7@gmail.com</p>
           </div>
       </div>
   </section>
@@ -291,38 +287,31 @@
     「選べる」刺し子キットが登場です。
   </div>
 
+  <!-- コンセプトセクション -->
   <section class="lp-section">
     <div class="section-header">
       <h2 class="lp-title">Concept</h2>
     </div>
     <div>
       <p>「日常使いできるアイテムを、もっとカジュアルに、刺し子で楽しみたい」<br>
-      そんな声にお応えして、カラーシーチング生地を使った<span class="lp-accent">「刺し子の小豆カイロキット 2025年バージョン」</span>をご用意しました。</p>
+      そんな声にお応えして、カラーシーチング生地を使った<span class="lp-accent">「刺し子の小豆カイロキット」</span>をご用意しました。</p>
       <br>
       <img src="image/IMG_6865.jpg" alt="小豆カイロ花刺し" class="img-medium">
-      <p>「この生地には、あの糸が似合うかな？」<br>
-      そんな風に、<span class="lp-accent">お気に入りの糸との組み合わせを考える</span>のも、このキットの楽しみの一つ。<br>
-      <br>
-      お手持ちの刺し子糸を使って、<br>
+      <p>お手持ちの刺し子糸を使って、<br>
       あなただけの色合わせをお楽しみください。</p>
     </div>
     <img src="image/IMG_6864.jpg" alt="選べる2色のカラーシーチング" class="img-medium">
 　　<img src="image/IMG_8694.JPG" alt="北海道産小豆150g" class="img-medium">
     <div>
-      <p>中身は北海道産小豆を<span class="lp-bold">たっぷり150g</span>。<br>
-      電子レンジで温めるだけで、じんわりとした湿熱が体を芯から温めてくれます。</p>
+      <p>中身は北海道産小豆を<span class="lp-bold">たっぷり150g</span>。じんわりとした湿熱が体を芯から温めてくれます。</p>
     </div>
   </section>
 
+  <!-- 選べる楽しさセクション -->
   <section class="lp-section">
     <div class="section-header">
       <h2 class="lp-title">Select</h2>
       <p>選べる「色」と「柄」</p>
-    </div>
-    <div class="lp-text-center">
-      <p>今回のキットは、<br>
-      <span class="lp-accent">「生地の色」</span>と<span class="lp-accent">「刺し子の柄」</span><br>
-      をそれぞれお選びいただけます。</p>
     </div>
     <div style="margin-top:30px;">
       <h3 class="lp-text-center">1. 生地の色を選ぶ</h3>
@@ -330,12 +319,10 @@
         <div class="choice-box choice-box-2col">
           <span class="choice-title">グレーカラー</span>
           <img src="image/IMG_6860.png" alt="グレーカラー" style="width:100%; border-radius:4px;">
-          <p class="choice-desc">（生地：シーチング）<br>糸色で大きく変わる表情が魅力</p>
         </div>
         <div class="choice-box choice-box-2col">
           <span class="choice-title">パープルカラー</span>
           <img src="image/IMG_6862.png" alt="パープルカラー" style="width:100%; border-radius:4px;">
-          <p class="choice-desc">（生地：シーチング）<br>2025の新色。主張の強い鮮やかな色</p>
         </div>
       </div>
     </div>
@@ -345,86 +332,36 @@
         <div class="choice-box">
           <span class="choice-title">① 丸つなぎ</span>
           <img src="image/丸つなぎ.jpg" alt="丸つなぎ図案" style="width:100%; border-radius:4px;">
-          <p class="choice-desc"><span class="lp-bold">【下図記入済み】</span><br>円が重なり合う、縁起の良い丸模様。</p>
         </div>
         <div class="choice-box">
           <span class="choice-title">① 丸つなぎ</span>
           <img src="image/IMG_6963.jpg" alt="丸つなぎ完成例" style="width:100%; border-radius:4px;">
-          <p class="choice-desc"><span class="lp-bold">【完成例】</span><br>3色の色糸で表情をつけてみました。</p>
         </div>
         <div class="choice-box">
           <span class="choice-title">② 花刺し</span>
           <img src="image/方眼花刺し4mm黒.jpg" alt="花刺し図案" style="width:100%; border-radius:4px;">
-          <p class="choice-desc"><span class="lp-bold">【下図の方眼記入済み】</span><br>ガイドに合わせて小花を咲かせる人気の柄。</p>
         </div>
         <div class="choice-box">
           <span class="choice-title">② 花刺し</span>
           <img src="image/IMG_6962.jpg" alt="花刺し完成例" style="width:100%; border-radius:4px;">
-          <p class="choice-desc"><span class="lp-bold">【完成例】</span><br>単色の花刺しは定番で人気です。</p>
         </div>
         <div class="choice-box">
           <span class="choice-title">③ 無地</span>
           <img src="image/一目干網.jpg" alt="一目干網" style="width:100%; border-radius:4px;">
-          <p class="choice-desc"><span class="lp-bold">【一目干網 図案付】</span><br>自由に刺したい方に。<br>※別途, 一目干網の下図用プリントをお付けします。</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- 初心者安心セクション -->
   <section class="lp-section" style="background-color:#fff;">
     <div class="section-header">
       <h2 class="lp-title">Easy to Make</h2>
     </div>
-    <div style="margin-bottom:30px;">
-      <p class="lp-text-center" style="font-weight:bold; font-size:1.4rem;">
-        「本格的な道具を持っていないけど<br>大丈夫？」
-      </p>
-      <br>
-      <p class="lp-text-center">
-        はい！<br>
-        お家にある<span class="lp-accent">「ハサミ・アイロン」などの裁縫道具</span>と、<br>
-        お好みの<span class="lp-accent">「針と糸」</span>さえご用意いただければ、<br>
-        あとはキットにお任せください。
-      </p>
-    </div>
     <div class="check-box">
       <div class="check-item">✅ 丸つなぎ・花刺しは「下図記入済み」！</div>
-      <div class="check-item">✅ 面倒な図案写しは不要！（無地を除く）</div>
+      <div class="check-item">✅ 面倒な図案写しは不要！</div>
       <div class="check-item">✅ 刺し子どりの「解説動画」付き！</div>
-    </div>
-    <p class="lp-text-center">
-      下準備が済んでいるので、<br>
-      届いたらすぐにチクチク時間を始められます。
-    </p>
-  </section>
-
-  <section class="lp-section">
-    <div class="section-header">
-      <h2 class="lp-title">Voice</h2>
-      <p>喜びの声が続々届いています</p>
-    </div>
-    <div class="voice-section">
-      <div class="voice-card">
-        <p class="voice-text">
-          商品届きました。<br>
-          丁寧にセットされたキットで、感動しています。開けるのがもったいないぐらい！
-        </p>
-        <div class="voice-meta">（開封のワクワクが伝わります♪）</div>
-      </div>
-      <div class="voice-card">
-        <p class="voice-text">
-          わかりやすい説明書を付けていただいているので悩まず作れそうです。<br>
-          年末年始のお休みの楽しみが増えました！
-        </p>
-        <div class="voice-meta">（初心者さんも安心です！）</div>
-      </div>
-      <div class="voice-card">
-        <p class="voice-text">
-          開けたらハーブのいい匂いでウキウキです😊<br>
-          グレーにしたのですが、私好みの落ち着いた色でとても使いやすそうです♪
-        </p>
-        <div class="voice-meta">（癒やしの香りもお届け🌿）</div>
-      </div>
     </div>
   </section>
 
@@ -435,38 +372,34 @@
     <img src="image/IMG_7006 (1).jpg" alt="キットの中身一式" class="img-restrict-size">
     <ul class="kit-list">
       <li>カラーシーチング（表地）：1枚</li>
-      <li>内袋用 白晒：1枚</li>
-      <li>北海道産小豆：150g</li>
-      <li>ローズマリー 1本 / 月桂樹 2枚</li>
+      <li>内袋用 白晒：1枚 / 北海道産小豆：150g</li>
+      <li>ハーブ（ローズマリー/月桂樹）</li>
       <li>仕様書・説明書（動画解説付）</li>
     </ul>
   </section>
 
+  <!-- 注文エリア -->
   <section class="lp-section">
     <div class="price-box">
       <p style="font-weight:bold;">刺し子小豆カイロキット（2025 ver.）</p>
       <p class="price-yen">¥2,500 <span style="font-size:1.5rem; font-weight:normal;">(税込)</span></p>
       <p class="lp-accent">★日本全国 送料込み</p>
-      <p style="font-size:1.1rem; margin-top:15px; color:#555;">
-        【1月予約受付中】<br>
-      </p>
+      <p style="font-size:1.1rem; margin-top:15px; color:#555;">【1月予約受付中】</p>
     </div>
 
-    <h3 class="lp-text-center">ご注文の流れ（公式LINE / メール）</h3>
+    <h3 class="lp-text-center">ご注文の流れ</h3>
     <div class="flow-box">
-      <p class="flow-step"><span>1</span> 下記ボタンより「公式LINE」または「メール」でご連絡ください。</p>
+      <p class="flow-step"><span>1</span> 下記ボタンよりご連絡ください。</p>
       <div class="dm-template">
         【ご注文用テンプレート】<br>
         1. お名前（本名）：<br>
         2. 郵便番号・ご住所：<br>
         3. 電話番号：<br>
         4. ご希望の「色」と「柄」：<br>
-           （例：グレー × 丸つなぎ 1つ）<br><br>
-        ---<br>
-        メール宛先：doripu7@gmail.com
+           （例：グレー × 丸つなぎ 1つ）
       </div>
-      <p class="flow-step"><span>3</span> 折り返し、振込先口座をご案内します。</p>
-      <p class="flow-step"><span>4</span> ご入金確認後、順次発送いたします。</p>
+      <p class="flow-step"><span>2</span> 折り返し、振込先口座をご案内します。</p>
+      <p class="flow-step"><span>3</span> ご入金確認後、順次発送いたします。</p>
     </div>
   </section>
 
@@ -474,19 +407,26 @@
     <div class="section-header">
       <h2 class="lp-title">How to Order</h2>
     </div>
-    <div class="lp-text-center">
+    <div class="lp-text-center" style="margin-bottom: 30px;">
       <p>
-        現在、InstagramのDMが制限されているため、<br>
-        <span class="lp-accent">【公式LINE】</span>または<span class="lp-accent">【メール】</span>にてお申し込みを承ります。<br><br>
-        ご希望の方は、下記よりお進みください。
+        現在、Instagramの不具合により、<br>
+        <span class="lp-accent">【公式LINE】</span>または<span class="lp-accent">【メール】</span>にてお申し込みを承ります。
       </p>
     </div>
-    <a href="https://lin.ee/ce9vOwT" class="line-main-btn" target="_blank" rel="noopener">
-      公式LINEでキットを注文する
+    
+    <!-- 巨大ボタン 2つ -->
+    <a href="https://lin.ee/ce9vOwT" class="btn-common line-main-btn" target="_blank" rel="noopener">
+      公式LINEで注文する
     </a>
-    <a href="mailto:doripu7@gmail.com" class="mail-sub-btn">
-      メールでキットを注文する（doripu7@gmail.com）
+    
+    <a href="mailto:doripu7@gmail.com?subject=刺し子小豆カイロキット申し込み" class="btn-common mail-main-btn">
+      メールで注文する
     </a>
+    
+    <p style="text-align:center; font-size:0.9rem; color:#666; margin-top:10px;">
+      メール：doripu7@gmail.com
+    </p>
+
   </section>
 
   <div style="text-align:center; font-size:1.2rem; margin-top:30px; color:#666;">
@@ -495,7 +435,7 @@
 
 </div>
 
-<!-- 固定ボタン -->
+<!-- 下部固定ボタン（LINE） -->
 <a href="https://lin.ee/ce9vOwT" class="sticky-cta-line" target="_blank" rel="noopener">
   <span style="font-size:2rem;">LINE</span>
   公式LINEで申し込む
